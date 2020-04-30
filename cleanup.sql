@@ -1,7 +1,7 @@
 DELETE FROM osu_scores_high WHERE hidden!=0;
 
 -- Saving the id of the scores we delete :
-CREATE TABLE duplicate_scores(score_id int(9) PRIMARY KEY NOT NULL);
+CREATE TABLE duplicate_scores(score_id int(9) UNSIGNED PRIMARY KEY NOT NULL);
 INSERT INTO duplicate_scores SELECT A.score_id FROM osu_scores_high AS A WHERE EXISTS (
     SELECT * FROM osu_scores_high AS B WHERE (
         A.score_id!=B.score_id AND A.beatmap_id=B.beatmap_id AND A.enabled_mods=B.enabled_mods AND A.user_id=B.user_id
