@@ -1,18 +1,11 @@
 '''
-NOTE: I have converted my .ipynb files to py here, but I recommend you execute these scripts
-on a Jupyter notebook, splitting the scripts up into cells as appropriate.
+INSTRUCTIONS
 
-Helper scripts:
-sql_connector - Makes retrieving data from dumps more convenient
-curve_analysis - Contains plotting methods and lex table methods
+1. Download dumps, and create a database for each in mysql
+2. Replace sql information below, and set paths for storage (minimum 5 GB)
+3. Run process_dump.py. REQUIRED files must be saved to continue
+4. Run sandbox.py, then feel free to mess around
 
-Execute scripts in this order to ensure you have the necessary data to move on to the next one:
-1. dump_compression.py - converts dumps in npy files
-2. aggregate_scores.py - Combines npy files and calculates acc
-3. formulas.py - Recalculates user pp entirely, as dump is missing 50% of pp values
-
-Once you have the necessary data by running the scripts above, run sandbox.py, which
-will give you a better understanding of the methods in lex.py
 '''
 
 # Information about your sql database
